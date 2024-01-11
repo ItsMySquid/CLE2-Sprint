@@ -6,6 +6,7 @@
         <link rel='stylesheet' href="style/style.css">
         <title>Welcome to Elfie Creates.</title>
     </head>
+
     <body>
         <h1>This is a Heading</h1>
         <p>This is a paragraph.</p>
