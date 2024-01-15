@@ -21,15 +21,15 @@ img {
 
 button {
     color: white;
-    background-color: #424549;
+    background-color: #C2B280;
 
     transition: 0.3s;
 
     border-radius: 12px;
 
-    font-size: 16px;
+    font-size: 2vw;
 
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #9C8B59;
 
     text-align: center;
     text-decoration: none;
@@ -65,16 +65,16 @@ a {
     transition: 0.3s;
 
     border-radius: 2vw;
-    padding: .7vw 4vw;
+    padding: .7vw 6vw;
     margin: 0 4vw;
 }
 
 a:hover {
-    color: #B83330  ;
+    color: #B83330;
     background-color: #C2B280;
 
     border-radius: 2vw;
-    padding: .7vw 4vw;
+    padding: .7vw 6vw;
     margin: 0 4vw;
 }
 
@@ -90,7 +90,7 @@ nav {
     display: flex;
     justify-content: center;
 
-    margin: auto;
+    margin: -8px;
     padding: 1vw;
 }
 
@@ -101,8 +101,8 @@ nav {
 .nav_logo {
     border: none;
 
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 
     object-fit: contain;
     border-radius: 2vw;
@@ -112,6 +112,25 @@ nav {
 
 body {
     background-color: #FFE4C4;
+}
+
+.homepage {
+    background-image: url(../images/home_background.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.head_section_title {
+    color: #C2B280;
+
+    font-size: 3vw;
+}
+
+.head_section_text {
+    color: #B83330;
+
+    font-size: 1vw;
 }
 
 header {
@@ -128,7 +147,7 @@ header {
     margin: 12.5vw 15vw;
 }
 
-.header_buttons {
+.header_button {
     display: flex;
     justify-content: center;
 

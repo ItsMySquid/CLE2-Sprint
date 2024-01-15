@@ -4,20 +4,27 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' href="style/style.css">
-        <title>Welcome to Elfie Creates</title>
+        <title>Welkom bij Elfie Creates</title>
     </head>
 
-    <body>
+    <body class="homepage">
         <nav>
             <img class="nav_logo" src="images/logo.png" alt="">
             <div class="links_nav">
                 <a href="includes/afspraak.php">Afspraak Maken</a>
-                <a href="includes/producten.php">Diensten</a>
+                <a href="includes/producten.php">Onze Diensten</a>
                 <a href="includes/over_ons.php">Over Ons</a>
             </div>
         </nav>
 
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph.</p>
+        <header id="about">
+            <h2 class="head_section_title">Elfie Creates | Your time is precious.</h2>
+            <p class="head_section_text">
+                Met uw eigen gepersonaliseerde planner, bent u altijd goed op weg!
+            </p>
+            <div>
+                <button class="header_button" onclick="window.open('includes/afspraak.php')">Maak een afspraak</button>
+            </div>
+        </header>
     </body>
 </html>
