@@ -18,12 +18,12 @@
         </nav>
 
         <header id="about">
-            <h2 class="head_section_title">Elfie Creates | Your time is precious.</h2>
-            <p class="head_section_text">
-                Met uw eigen gepersonaliseerde planner, bent u altijd goed op weg!
-            </p>
-            <div>
-                <button class="header_button" onclick="window.open('includes/afspraak.php')">Maak een afspraak</button>
+            <div class="text_bubble">
+                <h2 class="head_section_title">Uw tijd is kostbaar.</h2>
+                <p class="head_section_text">
+                    Met uw eigen gepersonaliseerde planner, bent u altijd goed op weg!
+                </p>
+                <button class="header_button" onclick="window.location.href='includes/afspraak.php'">Afspraak Maken</button>
             </div>
         </header>
     </body>
