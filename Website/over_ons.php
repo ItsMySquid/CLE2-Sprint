@@ -9,11 +9,11 @@
 
     <body>
         <nav>
-            <img class="nav_logo" src="images/logo.png" alt="">
+            <a href="index.php"><img class="nav_logo" src="images/logo.png" alt=""></a>
             <div class="links_nav">
-                <a href="afspraak.php">Afspraak Maken</a>
-                <a href="producten.php">Onze Diensten</a>
-                <a href="over_ons.php">Over Ons</a>
+                <a class="nav_buttons" href="afspraak.php">Afspraak Maken</a>
+                <a class="nav_buttons" href="producten.php">Onze Diensten</a>
+                <a class="nav_buttons" href="over_ons.php">Over Ons</a>
             </div>
         </nav>
 

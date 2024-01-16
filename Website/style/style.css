@@ -19,13 +19,17 @@ img {
     border-color: #000000;
 }
 
+header {
+
+}
+
 button {
     color: white;
     background-color: #C2B280;
 
     transition: 0.3s;
 
-    border-radius: 12px;
+    border-radius: 16px;
 
     font-size: 2vw;
 
@@ -42,40 +46,15 @@ button {
 }
 
 button:hover {
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: #FFE4C4;
+    color: #B83330;
 
     text-shadow: 2px 2px 4px #BCBCBC;
 
-    border-radius: 6px;
-
-    transform: scale(1.05);
 }
 
 h1 {
     font-size: 2.5rem;
-}
-
-a {
-    color: #B83330;
-    background-color: #FFE4C4;
-
-    text-decoration: none;
-
-    transition: 0.3s;
-
-    border-radius: 2vw;
-    padding: .7vw 6vw;
-    margin: 0 4vw;
-}
-
-a:hover {
-    color: #B83330;
-    background-color: #C2B280;
-
-    border-radius: 2vw;
-    padding: .7vw 6vw;
-    margin: 0 4vw;
 }
 
 /* NAV BAR /////////////////////////////////*/
@@ -94,8 +73,26 @@ nav {
     padding: 1vw;
 }
 
-.links_nav {
+.nav_buttons {
+    color: #B83330;
+    background-color: #FFE4C4;
 
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    border-radius: 2vw;
+    padding: .7vw 6vw;
+    margin: 0 4vw;
+}
+
+.nav_buttons:hover {
+    color: #B83330;
+    background-color: #C2B280;
+
+    border-radius: 2vw;
+    padding: .7vw 6vw;
+    margin: 0 4vw;
 }
 
 .nav_logo {
@@ -122,18 +119,10 @@ body {
 }
 
 .text_bubble {
-    background-color: #f5450b;
-
     font-size: 24px;
     text-align: center;
 
-    transition: 0.3s;
-
-    border: 2px solid #000000;
-    border-radius: 3vw;
-    box-shadow: 1px 1px 15px #000000;
-
-    padding: 2.5vw 2.5vw;
+    padding: 12.5vw 35vw;
     margin: auto;
 }
 
@@ -147,20 +136,6 @@ body {
     color: #B83330;
 
     font-size: 1vw;
-}
-
-header {
-    color: #FFFFFF;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    font-size: 24px;
-    text-align: center;
-
-    margin: 12.5vw 15vw;
 }
 
 .header_button {
