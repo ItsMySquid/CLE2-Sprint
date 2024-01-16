@@ -45,5 +45,75 @@ mysqli_close($db)
 
         <h1>This is a Heading</h1>
         <p>This is a paragraph.</p>
+
+
+        <form action="" method="post">
+            <div>
+                <label for="x">Datum</label>
+                <input type="date" id="date" name="date" value="<?= $date ?? null ?>">
+                <p>
+                    <?= $errors['date'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">Tijd</label>
+                <input type="text" id="time" name="time" value="<?= $time ?? null ?>">
+                <p>
+                    <?= $errors['time'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">Voornaam</label>
+                <input type="text" id="firstName" name="firstName" value="<?= $first_name ?? null ?>">
+                <p>
+                    <?= $errors['firstName'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">Achternaam</label>
+                <input type="text" id="lastName" name="lastName" value="<?= $last_name ?? null ?>">
+                <p>
+                    <?= $errors['lastName'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">Telefoonnummer</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" value="<?= $phone_number ?? null ?>">
+                <p>
+                    <?= $errors['phoneNumber'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">E-Mail</label>
+                <input type="email" id="email" name="email" value="<?= $email ?? null ?>">
+                <p>
+                    <?= $errors['email'] ?? null ?>
+                </p>
+            </div>
+
+
+            <div>
+                <label for="x">Opmerking</label>
+                <textarea type="text" id="remarks" name="remarks" value="<?= $remarks ?? null ?>"></textarea>
+                <p>
+                    <?= $errors['remarks'] ?? null ?>
+                </p>
+            </div>
+
+            <div>
+                <button type="submit" name="submit">Afspraak maken</button>
+            </div>
+
+        </form>
     </body>
 </html>
