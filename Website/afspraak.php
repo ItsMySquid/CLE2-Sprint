@@ -1,7 +1,17 @@
 <?php
 /** @var mysqli $db */
 
-require_once 'includes/database.php'
+require_once 'includes/database.php';
+
+if(isset($_POST['submit'])) {
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $first_name = $_POST['firstName'];
+    $last_name = $_POST['lastName'];
+    $phone_number = $_POST['phoneNumber'];
+    $email = $_POST['email'];
+    $remarks = $_POST['remarks'];
+}
 
 ?>
 
