@@ -23,7 +23,7 @@
                 <p class="head_section_text">
                     Met uw eigen gepersonaliseerde planner, bent u altijd goed op weg!
                 </p>
-                <button class="header_button" onclick="window.location.href='includes/afspraak.php'">Afspraak Maken</button>
+                <button class="header_button" onclick="window.location.href='afspraak.php'">Afspraak Maken</button>
             </div>
         </header>
     </body>
