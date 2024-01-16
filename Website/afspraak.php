@@ -11,8 +11,17 @@ if(isset($_POST['submit'])) {
     $phone_number = $_POST['phoneNumber'];
     $email = $_POST['email'];
     $remarks = $_POST['remarks'];
-}
 
+    require_once 'includes/form-validation.php';
+    if (empty($errors)) {
+        $query = "INSERT INTO appointment (date, time, first_name, last_name, phone_number, email, remarks) VALUES ('$date', '$time', '$first_name', '$last_name', '$phone_number', '$email', '$remarks')";
+        $results = mysqli_query($db, $query);
+
+        header('location: index.php');
+        exit();
+    }
+}
+mysqli_close($db)
 ?>
 
 <html lang="en">
