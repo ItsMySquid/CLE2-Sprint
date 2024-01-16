@@ -11,7 +11,7 @@
     if($_POST['lastName'] == '') {
         $errors['lastName'] = 'Er moet een achternaam worden ingevuld.';
 }
-    if(!is_numeric($_POST['phoneNumber']) || ) {
+    if(!is_numeric($_POST['phoneNumber'])) {
         $errors['phoneNumber'] = 'Er moet een telefoonnummer worden ingevuld.';
 }
     if($_POST['email'] == '') {
