@@ -1,8 +1,8 @@
 <?php
-$host = "";
-$database = "prj_2023_2024_ressys_t22";
+$host = "localhost";
 $user = "prj_2023_2024_ressys_t22";
 $password = "uwaezeim";
+$database = "prj_2023_2024_ressys_t22";
 
-$db = mysqli_connect($host, $database, $user, $password)
+$db = mysqli_connect($host, $user, $password, $database)
     or die("Error: " . mysqli_connect_error());
