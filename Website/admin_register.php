@@ -8,9 +8,7 @@ if(isset($_POST['submit'])) {
 
     $user = $_POST['user'];
     $password = $_POST['password'];
-
     require_once 'includes/admin_error.php';
-
     if (empty($errors)) {
         $password = password_hash("$password", PASSWORD_DEFAULT);
 
@@ -40,13 +38,13 @@ if(isset($_POST['submit'])) {
 <form method="post">
     <label for="user">user</label>
     <input id="user" type="text" name="user" value="<?= $login ?? '' ?>" />
-    <p><?= $errors['loginFailed'] ?? '' ?></p>
+    <p><?= $errors['user'] ?? '' ?></p>
 
     <label for="password">password</label>
     <input id="password" type="text" name="password" value="<?= $password ?? '' ?>" />
-    <p><?= $errors['loginFailed'] ?? '' ?></p>
+    <p><?= $errors['password'] ?? '' ?></p>
 
-    <button type="submit" name="login">Register</button>
+    <button type="submit" name="submit">Register</button>
 </form>
 <a href="admin_login.php">Terug</a>
 
