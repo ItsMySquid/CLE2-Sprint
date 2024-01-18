@@ -8,18 +8,18 @@ session_start();
 if (!isset($_SESSION['login'])) {
     if (isset($_POST['submit'])) {
 
-        $email = htmlentities($_POST['email']);
+        $user = htmlentities($_POST['user']);
         $password = htmlentities($_POST['password']);
 
         require_once 'includes/admin_error.php';
 
         if (empty($errors)) {
 
-            $emailquery = "SELECT * FROM users WHERE email = '$email'";
-            $emailresult = mysqli_query($db, $emailquery);
-            if ($emailresult) {
-                $userdata = mysqli_fetch_assoc($emailresult);
-                if ($userdata && password_verify($password, $userdata['password'])) {
+            $userquery = "SELECT * FROM admin WHERE user = '$user'";
+            $userresult = mysqli_query($db, $userquery);
+            if ($userresult) {
+                $userdata = mysqli_fetch_assoc($userresult);
+                if ($userdata) {
                     $_SESSION['login'] = true;
                     header("location: admin_page.php");
                 }
@@ -33,8 +33,34 @@ if (!isset($_SESSION['login'])) {
         }
     }
 } else {
-    header("location: index.php");
-    exit();
+//    header("location: index.php");
+//    exit();
 }
 
 ?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="post">
+    <label for="user">user</label>
+    <input id="user" type="text" name="user" value="<?= $login ?? '' ?>" />
+    <p><?= $errors['loginFailed'] ?? '' ?></p>
+
+    <label for="password">password</label>
+    <input id="password" type="text" name="password" value="<?= $password ?? '' ?>" />
+    <p><?= $errors['loginFailed'] ?? '' ?></p>
+
+    <button type="submit" name="login">Login</button>
+</form>
+
+</body>
+</html>

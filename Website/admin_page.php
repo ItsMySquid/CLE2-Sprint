@@ -1,6 +1,8 @@
 <?php
 /** @var mysqli $db */
 
+session_start();
+
 require_once 'includes/database.php';
 if (isset($_SESSION['login'])) {
     $query = "SELECT * FROM appointment";
@@ -10,8 +12,8 @@ if (isset($_SESSION['login'])) {
 
     $appointment = mysqli_fetch_assoc($result);
 } else {
-    header("location: admin_login");
-    exit();
+//    header("location: admin_login");
+//    exit();
 }
 ?>
 
