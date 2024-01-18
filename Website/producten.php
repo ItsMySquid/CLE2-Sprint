@@ -22,21 +22,21 @@
                 <article>
                     <div>
                         <img src="images/card_1.png" alt="" class="prod_img">
-                        <h3>Functionaliteit & Stijl</h3>
+                        <h2>Functionaliteit & Stijl</h2>
                         <p>Een effectieve planner moet niet alleen praktisch zijn, maar ook een plezier om te gebruiken. Daarom combineren we funtionaliteit met stijvol design.</p>
                     </div>
                 </article>
-                <article>
+                <article class="middle_card">
                     <div>
                         <img src="images/card_2.png" alt="" class="prod_img">
-                        <h3>Uniekheid</h3>
+                        <h2>Uniekheid</h2>
                         <p>Wij geloven in de schoonheid van individualiteit. Onze planners worden op maat gemaakt om naadloos aan te sluiten op uw behoeften en voorkeuren.</p>
                     </div>
                 </article>
                 <article>
                     <div>
                         <img src="images/card_3.png" alt="" class="prod_img">
-                        <h3>Inspireren tot Actie</h3>
+                        <h2>Inspireren tot Actie</h2>
                         <p>Een planner is meer dan alleen papier en inkt; het is een instrument voor groei en succes. We streven ernaar om planners te creeren die inspireren tot actie.</p>
                     </div>
                 </article>
