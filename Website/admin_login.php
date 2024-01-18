@@ -17,9 +17,9 @@ if (!isset($_SESSION['login'])) {
 
             $userquery = "SELECT * FROM admin WHERE user = '$user'";
             $userresult = mysqli_query($db, $userquery);
-            if ($userresult && password_verify($password, $userresult['password'])) {
+            if ($userresult) {
                 $userdata = mysqli_fetch_assoc($userresult);
-                if ($userdata) {
+                if ($userdata && password_verify($password, $userdata['password'])) {
                     $_SESSION['login'] = true;
                     header("location: admin_page.php");
                 }
@@ -59,7 +59,7 @@ if (!isset($_SESSION['login'])) {
     <input id="password" type="text" name="password" value="<?= $password ?? '' ?>" />
     <p><?= $errors['password'] ?? '' ?></p>
 
-    <button type="submit" name="login">Login</button>
+    <button type="submit" name="submit">Login</button>
 </form>
 <a href="admin_register.php">Register</a>
 
