@@ -17,7 +17,7 @@ if (!isset($_SESSION['login'])) {
 
             $userquery = "SELECT * FROM admin WHERE user = '$user'";
             $userresult = mysqli_query($db, $userquery);
-            if ($userresult) {
+            if ($userresult && password_verify($password, $userresult['password'])) {
                 $userdata = mysqli_fetch_assoc($userresult);
                 if ($userdata) {
                     $_SESSION['login'] = true;
@@ -53,14 +53,16 @@ if (!isset($_SESSION['login'])) {
 <form method="post">
     <label for="user">user</label>
     <input id="user" type="text" name="user" value="<?= $login ?? '' ?>" />
-    <p><?= $errors['loginFailed'] ?? '' ?></p>
+    <p><?= $errors['user'] ?? '' ?></p>
 
     <label for="password">password</label>
     <input id="password" type="text" name="password" value="<?= $password ?? '' ?>" />
-    <p><?= $errors['loginFailed'] ?? '' ?></p>
+    <p><?= $errors['password'] ?? '' ?></p>
 
     <button type="submit" name="login">Login</button>
 </form>
+<a href="admin_register.php">Register</a>
+
 
 </body>
 </html>
