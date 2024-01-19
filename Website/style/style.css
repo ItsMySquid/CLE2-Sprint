@@ -131,7 +131,7 @@ body {
 
     justify-content: center;
 
-    padding: 9.5vw 35vw;
+    padding: 12.5vw 35.5vw;
     margin: auto;
 }
 
@@ -141,6 +141,8 @@ body {
     text-shadow: 2px 2px 4px #C2B280;
 
     font-size: 4vw;
+
+    margin: auto;
 }
 
 .head_section_text {
@@ -259,19 +261,26 @@ article:hover {
 
     opacity: 0.75;
 
-    font-size: 3vw;
+    font-size: 3.5vw;
+
+    margin: 0;
 }
 
 .intro_text {
+    color: #C2B280;
     background-color: rgba(184, 51, 48, 0.1);
 
     border-radius: 1vw;
 
     padding: 2vw;
-    margin: 0;
+    margin-top: -1.5vw;
 }
 
 .mission_text {
+    background-color: rgba(194, 178, 128, 0.65);
+
+    border-radius: 10vw;
+
     display: flex;
     flex-direction: column;
 
@@ -286,14 +295,18 @@ article:hover {
 }
 
 .mission_info {
-    background-color: rgba(184, 51, 48, 0.1);
-
-    border-radius: 10vw;
+    color: #FFE4C4;
 
     text-align: center;
+
+    margin-top: -2vw;
 }
 
 .vision_text {
+    background-color: rgba(194, 178, 128, 0.65);
+
+    border-radius: 10vw;
+
     display: flex;
     flex-direction: column;
 
@@ -308,16 +321,19 @@ article:hover {
 }
 
 .vision_info {
-    background-color: rgba(184, 51, 48, 0.1);
-
-    border-radius: 10vw;
+    color: #FFE4C4;
 
     text-align: center;
+
+    margin-top: -2vw;
 }
 
 .about_us_mini_bubbles {
     display: flex;
     flex-direction: row;
+
+    margin-top: -2vw;
+    margin-bottom: -2vw;
 }
 
 .about_us_picture {

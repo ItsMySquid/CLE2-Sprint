@@ -21,7 +21,7 @@
             <div class="text_bubble">
                 <h2 class="head_section_title">Uw tijd is kostbaar.</h2>
                 <p class="head_section_text">
-                    Met uw eigen gepersonaliseerde planner, bent u altijd goed op weg!
+                    Met uw eigen gepersonaliseerde planner, bent U altijd goed op weg!
                 </p>
                 <button class="header_button" onclick="window.location.href='afspraak.php'">Afspraak Maken</button>
             </div>
