@@ -10,10 +10,16 @@ if (isset($_SESSION['login'])) {
     $result = mysqli_query($db, $query)
     or die('Error ' . mysqli_error($db) . ' with query ' . $query);
 
-    $appointment = mysqli_fetch_assoc($result);
+    $appointments = [];
+
+    if ($result = mysqli_query($db, $query)) {
+        while ($row = $result->fetch_assoc()) {
+            $appointments[] = $row;
+        }
+    }
 } else {
-//    header("location: admin_login");
-//    exit();
+    header("location: admin_login");
+    exit();
 }
 ?>
 
@@ -28,41 +34,29 @@ if (isset($_SESSION['login'])) {
 </head>
 <body>
 
-    <table>
+<table>
+    <tr>
+        <th>Datum</th>
+        <th>Tijd</th>
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Telefoonnummer</th>
+        <th>Email</th>
+        <th>Opmerking</th>
+    </tr>
+
+    <?php foreach ($appointments as $appointment) {?>
         <tr>
-            <th>Datum</th>
-            <th>Tijd</th>
-            <th>Voornaam</th>
-            <th>Achternaam</th>
-            <th>Telefoonnummer</th>
-            <th>Email</th>
-            <th>Opmerking</th>
+            <td><?= $appointment['date'] ?></td>
+            <td><?= $appointment['time'] ?></td>
+            <td><?= $appointment['first_name'] ?></td>
+            <td><?= $appointment['last_name'] ?></td>
+            <td><?= $appointment['phone_number'] ?></td>
+            <td><?= $appointment['email'] ?></td>
+            <td><?= $appointment['remarks'] ?></td>
         </tr>
-
-<?php
-if ($result = mysqli_query($db, $query)) {
-    while ($row = $result->fetch_assoc()) {
-        $date = $row["date"];
-        $time = $row["time"];
-        $first_name = $row["first_name"];
-        $last_name = $row["last_name"];
-        $phone_number = $row["phone_number"];
-        $email = $row["email"];
-        $remarks = $row["remarks"];
-
-        echo '<tr> 
-                  <td>'.$date.'</td> 
-                  <td>'.$time.'</td> 
-                  <td>'.$first_name.'</td> 
-                  <td>'.$last_name.'</td> 
-                  <td>'.$phone_number.'</td> 
-                  <td>'.$email.'</td> 
-                  <td>'.$remarks.'</td> 
-              </tr>';
-    }
-}
-?>
-    </table>
+    <?php } ?>
+</table>
 
 
 </body>
